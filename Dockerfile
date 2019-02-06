@@ -12,4 +12,5 @@ RUN mkdir $ANDROID_HOME && \
     rm sdk-tools-linux.zip && \
     yes | sdkmanager --licenses > /dev/null && \
     wget https://raw.githubusercontent.com/travis-ci/travis-cookbooks/master/community-cookbooks/android-sdk/files/default/android-wait-for-emulator -O /usr/local/bin/android-wait-for-emulator && \
-    chmod +x /usr/local/bin/android-wait-for-emulator
+    chmod +x /usr/local/bin/android-wait-for-emulator &&\
+    sdkmanager "emulator" "platform-tools" "tools" "extras;android;m2repository"
